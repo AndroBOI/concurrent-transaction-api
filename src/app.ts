@@ -1,10 +1,10 @@
 import express from "express";
-import helloRouter from "./routes/routes.js";
+import routes from "./routes/routes.js";
 
 const app = express();
 
 app.use(express.json());
 
-app.use("/", helloRouter);
+app.use("/", routes);
 
 export default app;
