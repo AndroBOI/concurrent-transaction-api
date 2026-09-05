@@ -2,6 +2,6 @@ import { pgTable, serial, varchar, integer } from "drizzle-orm/pg-core";
 
 export const accounts = pgTable("accounts", {
   id: serial("id").primaryKey(),
-  name: varchar("name", { length: 255 }).notNull(),
+  name: varchar("name", { length: 255 }).notNull().unique(),
   balance: integer("balance").notNull(),
 });
